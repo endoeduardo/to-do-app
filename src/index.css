@@ -39,8 +39,6 @@ body {
   font-size: var(--font-size-md);
   line-height: var(--line-height);
   font-weight: var(--font-weight-regular);
-  margin: 0;
-  padding: 0;
 }
 
 /* Utility classes (optional) */
@@ -62,4 +60,12 @@ body {
 
 .regular {
   font-weight: var(--font-weight-regular);
+}
+
+.header-spacer {
+  height: 200px; /* Same height as the header */
+}
+
+.App {
+  height: 200px;
 }
