@@ -1,4 +1,5 @@
 .header {
+    margin: 0;
     background-color: var(--gray-700);
     text-align: center;
     width: 100%;
@@ -6,9 +7,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
+    /* position: fixed; */
+    position: static;
+    /* top: 0;
+    left: 0; */
 }
 
 .h1Blue {

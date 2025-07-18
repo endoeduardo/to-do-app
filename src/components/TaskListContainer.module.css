@@ -1,0 +1,50 @@
+.taskListContainer {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin: 64px auto;
+}
+
+.taskListContainer header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.taskListContainer header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.taskStrongTitle {
+    color: var(--blue);
+}
+
+.taskStrongCount {
+    background-color: var(--gray-400);
+    color: var(--gray-200);
+    padding: 0.25rem 0.700rem;
+    margin: 0 0 0 4px;
+    border-radius: 20px;
+}
+
+.notePencil {
+    color: var(--gray-400);
+}
+
+.emptyTaskList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: var(--gray-400);
+    margin: 64px auto;
+}
+
+.emptyTaskList p {
+    font-size: var(--font-size-md);
+    margin-top: 0px;
+}
