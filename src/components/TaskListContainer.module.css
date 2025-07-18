@@ -48,3 +48,10 @@
     font-size: var(--font-size-md);
     margin-top: 0px;
 }
+
+.taskList{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+}

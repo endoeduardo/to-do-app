@@ -1,3 +1,4 @@
+import { Task } from './Task';
 import styles from './TaskListContainer.module.css';
 import { NotePencil } from 'phosphor-react';
 
@@ -14,10 +15,15 @@ export function TaskListContainer() {
                 <strong className={styles.taskStrongCount}>0</strong>
             </div>
         </header>
-        <div className={styles.emptyTaskList}>
+        {/* <div className={styles.emptyTaskList}>
             <NotePencil size={56} className={styles.notePencil}/>
             <strong>Você ainda não tem tarefas cadastradas</strong>
             <p>Crie tarefas e organize seus itens a fazer</p>
+        </div> */}
+        <div className={styles.taskList}>
+            <Task task="Estudar React"/>
+            <Task task="Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer."/>
+            <Task task="Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer."/>
         </div>
     </div>
   );

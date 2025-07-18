@@ -1,0 +1,38 @@
+.task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--gray-500);
+    border-radius: 8px;
+    padding: 0.25rem;
+}
+
+.task button {
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    color: var(--gray-300);
+}
+
+.task button:hover {
+    background-color: var(--gray-400);
+    border: 0px;
+    cursor: pointer;
+    color: var(--danger);
+    border-radius: 8px;
+
+}
+
+.checkedTaskContent {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.uncheckedTaskContent {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    color: var(--gray-300);
+    text-decoration: line-through;
+}
