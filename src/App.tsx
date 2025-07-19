@@ -6,6 +6,7 @@ import { useState } from 'react';
 type Task = {
   id: string;
   task: string;
+  isCompleted: boolean;
 };
 
 export function App() {
@@ -15,7 +16,8 @@ export function App() {
     const uuid = crypto.randomUUID();
     const newTask: Task = {
       id: uuid,
-      task: task
+      task: task,
+      isCompleted: false
     };
     setListTasks([...listTasks, newTask]);
   }
@@ -25,13 +27,24 @@ export function App() {
     setListTasks(updatedTasks);
   }
 
+  function onCompletion(id: string) {
+    const updatedTasks = listTasks.map(task => {
+      if (task.id === id) {
+        return { ...task, isCompleted: !task.isCompleted };
+      }
+      return task;
+    });
+    console.log(updatedTasks);
+    setListTasks(updatedTasks);
+  }
+
   return (
     <>
       <Header />
       {/* <div className="header-spacer" /> */}
       <div className="App">
         <InputTaskBar onAddTask={handleAddTask}/>
-        <TaskListContainer tasks={listTasks} handleRemoveTask={handleRemoveTask}/>
+        <TaskListContainer tasks={listTasks} handleRemoveTask={handleRemoveTask} onCompletion={onCompletion}/>
       </div>
     </>
   )

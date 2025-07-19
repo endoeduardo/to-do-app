@@ -6,9 +6,10 @@ interface TaskProps {
     task: string;
     id: string;
     onRemoveTask: (id: string) => void;
+    onCompletion: (id: string) => void;
 }
 
-export function Task( { task, id, onRemoveTask}: TaskProps) {
+export function Task( { task, id, onRemoveTask, onCompletion}: TaskProps) {
     const [checked, setChecked] = useState(false)
 
     function handleRemoveTask() {
@@ -18,7 +19,9 @@ export function Task( { task, id, onRemoveTask}: TaskProps) {
     function handleCheckboxChange(event: React.ChangeEvent<HTMLInputElement>) {
         const isChecked = event.target.checked;
         setChecked(isChecked);
+        onCompletion(id);
     }
+
     return (
         <div className={styles.task}>
             <div className={checked ? styles.uncheckedTaskContent : styles.checkedTaskContent }>
